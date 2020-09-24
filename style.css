@@ -1,0 +1,579 @@
+/* Current red shade: #ff4c4c */
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+/* @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap'); */
+
+
+html {
+	/* --primaryColor: #ff4c4c; */
+	--primaryColor: black;
+	--animationTime: 30s;
+	--animationStartShift: 0s;
+	--color1: rgb(212, 33, 211);
+	--color2: rgb(211, 11, 21);
+	--color3: rgb(114, 17, 137);
+	--color4: rgb(68, 209, 131);
+}
+
+/************
+* Standard. *
+************/
+body
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 100%;
+	text-align: justify;
+  margin: 0;
+  padding: 0;
+  background: var(--primaryColor);
+}
+
+a
+{
+	color: var(--primaryColor);
+	background: transparent;
+	border-radius: 0.25em;
+	-webkit-transition: color 0.3s linear, background-color 0.3s linear;
+	transition: color 0.3s linear, background-color 0.3s linear;
+}
+
+a:hover
+{
+	color: white;
+	background-color: var(--primaryColor);
+	-webkit-transition: color 0.3s linear, background-color 0.3s linear;
+	transition: color 0.3s linear, background-color 0.3s linear;
+}
+
+
+/**********
+* Header. *
+**********/
+.headerWrapper
+{
+	position: relative;
+	text-align: center;
+	background-color: transparent;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+
+/********
+* Logo. *
+********/
+.logo
+{
+	position: relative;
+	text-align: center;
+	width: 500pt;
+ 	margin-left: auto;
+  margin-right: auto;
+	margin-bottom: 12pt;
+}
+
+/**************
+* Navigation. *
+**************/
+.navigation
+{
+	color: white;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.navigation a
+{
+	color: white;
+}
+
+.navigation a:hover
+{
+	color: var(--primaryColor);
+	background-color: white;
+}
+
+.selected
+{
+	animation: colorchange_two var(--animationTime); /* Animation-name followed by duration in seconds. You could also use milliseconds (ms) or something like 2.5s */
+	-webkit-animation: colorchange_two var(--animationTime); /* Chrome and Safari */
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	animation-delay: var(--animationStartShift);
+	-webkit-animation-delay: var(--animationStartShift);
+}
+
+/**********
+* Footer. *
+**********/
+.footer
+{
+	color: white;
+	background-color: transparent;
+	text-align: center;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+.footer a
+{
+	color: white;
+}
+
+.footer a:hover
+{
+	color: var(--primaryColor);
+	background-color: white;
+}
+
+.selected
+{
+	background-color: white;
+	text-decoration: underline;
+  border-radius: 0.25em;
+}
+
+.selected a:hover
+{
+	color: white;
+	background: none;
+}
+
+.dance_gif a:hover
+{
+	color: var(--primaryColor);
+	background-color: black;
+}
+
+
+/************
+* Headings. *
+************/
+h1
+{
+	font-family: 'PT Sans', sans-serif;
+	padding-top: 0.75em;
+	font-size: 1.40em;
+  font-weight: bold;
+}
+
+h2
+{
+	font-family: 'PT Sans', sans-serif;
+	padding-top: 0.75em;
+	font-size: 1.20em;
+    font-weight: bold;
+}
+
+h3
+{
+	font-family: 'PT Sans', sans-serif;
+	padding-top: 0.75em;
+	font-size: 1.0em;
+    font-weight: bold;
+}
+
+/***********
+* Content. *
+***********/
+.contentWrapperBackground {
+	color: black;
+	background-color: white;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.contentWrapper
+{
+	background-color: white;
+	margin: 0 auto;
+	padding-left: 1em;
+	padding-right: 1em;
+	width: 42em;
+}
+
+/* See more at: https://css-tricks.com/snippets/css/drop-caps/ */
+.story-content p:first-child:first-letter {
+  float: left;
+  font-size: 4em;
+  line-height: 0.8em;
+  padding-top: 0.1em;
+  padding-right: 0.1em;
+  padding-left: 0em;
+}
+
+/* .story-content {
+	font-family: 'Vollkorn', serif;
+	font-size: 1.25em;
+} */
+
+/*********
+* Lists. *
+**********/
+
+li:not(:last-child) {
+    margin-bottom: 0.3em;
+		text-align: left;
+}
+
+/********************
+* Images and logos. *
+********************/
+.img
+{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.imgTop
+{
+    margin-bottom: 2em;
+}
+
+img.text
+{
+    display: block;
+	margin: 0 auto;
+	width: 100%;
+}
+
+img.profile
+{
+    display: block;
+	margin: 0 auto;
+	min-width: 40%;
+    max-width: 40%;
+    border-radius: 0.5em;
+}
+
+.link_icon
+{
+	position: relative;
+	top: 0.4em;
+	width: 1.4em;
+}
+
+.iconJekyll
+{
+	width: 0.5em;
+}
+
+
+/********************
+* Embed containers. *
+********************/
+.soundCloud
+{
+	width: 70%;
+	height: 250;
+}
+
+.embed-container-YouTube169
+{
+	position: relative;
+	padding-bottom: 50.5%;
+	height: 0;
+	overflow: hidden;
+	max-width: 90%;
+}
+.embed-container-YouTube169 iframe,
+.embed-container-YouTube169 object,
+.embed-container-YouTube169 embed
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+.embed-container-YouTube235
+{
+	position: relative;
+	padding-bottom: 36.75%;
+	/* padding-bottom: 36%; */
+	height: 0;
+	overflow: hidden;
+	max-width: 90%;
+}
+.embed-container-YouTube235 iframe,
+.embed-container-YouTube235 object,
+.embed-container-YouTube235 embed
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.embed-container-YouTube235_alt
+{
+	position: relative;
+	padding-bottom: 36%;
+	/* padding-bottom: 36%; */
+	height: 0;
+	overflow: hidden;
+	max-width: 90%;
+}
+.embed-container-YouTube235_alt iframe,
+.embed-container-YouTube235_alt object,
+.embed-container-YouTube235_alt embed
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.embed-container-Vimeo
+{
+	position: relative;
+	padding-bottom: 39%;
+	height: 0;
+	overflow: hidden;
+	max-width: 90%;
+}
+.embed-container-Vimeo iframe,
+.embed-container-Vimeo object,
+.embed-container-Vimeo embed
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/***********
+* Article. *
+***********/
+
+.article_start {
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+.article_back_top {
+	margin-bottom: 2em;
+}
+
+.article_back_bottom {
+	margin-top: 2em;
+}
+
+.article_title {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 2em;
+  font-weight: bold;
+}
+
+.article_status {
+	font-size: 0.75em;
+}
+
+.article_last_updated {
+	font-size: 0.75em;
+}
+
+.figure {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	margin-left: 2em;
+	margin-right: 2em;
+}
+
+.figure_image {
+	width: 100%;
+}
+
+.figure_caption {
+	font-style: italic;
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+
+/**************
+* Responsive. *
+**************/
+@media only screen and (min-width: 1px) and (max-width: 500px)
+{
+
+	body
+	{
+		text-align: left;
+	}
+
+	.textBlock
+	{
+		text-align: left;
+	}
+
+	.embed-container
+	{
+		padding-bottom: 40.00%;
+		max-width: 95%;
+	}
+}
+
+@media only screen and (min-width: 1px) and (max-width: 800px)
+{
+
+	body
+	{
+		font-size: 1em;
+		text-align: justify;
+	}
+
+	.contentWrapper
+	{
+    	margin-left: auto;
+    	margin-right: auto;
+		padding: 0em;
+		border: 0em;
+		width: 97.5%;
+	}
+
+	.navigation
+	{
+    	margin-left: auto;
+    	margin-right: auto;
+		text-align: center;
+	}
+
+	.textBlock
+	{
+		text-align: justify;
+	}
+}
+
+@media only screen and (max-device-width: 600px)
+{
+	img.profile
+	{
+		min-width: 60%;
+		max-width: 60%;
+	}
+
+	.soundCloud
+	{
+		width: 100%;
+		height: 450;
+	}
+}
+
+@media only screen and (max-device-width: 600px) and (orientation:portrait)
+{
+
+	body
+	{
+		font-size: 1.15em;
+	}
+
+	.textBlock
+	{
+		text-align: left;
+	}
+
+	.contentWrapper
+	{
+    	margin-left: auto;
+    	margin-right: auto;
+		padding: 0em;
+		border: 0em;
+		width: 97.5%;
+	}
+
+	.footer
+	{
+		font-size: 0.8em;
+	}
+}
+
+@media only screen and (max-device-width: 600px) and (orientation:landscape)
+{
+
+	body
+	{
+		font-size: 1em;
+	}
+
+	.textBlock
+	{
+		text-align: left;
+	}
+
+	.contentWrapper
+	{
+    	margin-left: auto;
+    	margin-right: auto;
+		padding: 0em;
+		border: 0em;
+		width: 95%;
+	}
+}
+
+@keyframes colorchange_one
+{
+	0%   {fill: var(--color1);}
+	25%  {fill: var(--color2);}
+	50%  {fill: var(--color3);}
+	75%  {fill: var(--color4);}
+	100%  {fill: var(--color1);}
+}
+
+@-webkit-keyframes colorchange_one
+{
+	/* Safari and Chrome - necessary duplicate */
+	0%   {fill: var(--color1);}
+	25%  {fill: var(--color2);}
+	50%  {fill: var(--color3);}
+	75%  {fill: var(--color4);}
+	100%  {fill: var(--color1);}
+}
+
+@keyframes colorchange_two
+{
+	0%   {background-color: var(--color1);}
+	25% {background-color: var(--color2);}
+	50%	{background-color: var(--color3);}
+	75%	{background-color: var(--color4);}
+	100%  {background-color: var(--color1);}
+}
+
+@-webkit-keyframes colorchange_two
+{
+	/* Safari and Chrome - necessary duplicate */
+	0%   {background-color: var(--color1);}
+	25% {background-color: var(--color2);}
+	50%	{background-color: var(--color3);}
+	75%	{background-color: var(--color4);}
+	100%  {background-color: var(--color1);}
+}
+
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
